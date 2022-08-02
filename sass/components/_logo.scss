@@ -1,0 +1,32 @@
+@import "../utils/variables";
+@import "../utils/placeholders";
+
+/* logo */
+
+.logo {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.page-header__logo {
+  margin-right: 93px;
+}
+
+.logo__color--blue {
+  color: $alternative-color;
+}
+
+.logo__color--black {
+  color: #000000;
+}
+
+.logo__color--white {
+  color: #ffffff;
+}

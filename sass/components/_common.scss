@@ -1,0 +1,93 @@
+@import "../utils/variables";
+@import "../utils/placeholders";
+
+body {
+  background-color: $primary-bg-color;
+  color: $primary-text-color;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.conteiner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 480px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+
+  outline: 2px solid orange;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section--greybg {
+  background-color: #f5f4fa;
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;
+  }
+}
+
+.titles-margin {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.text-margin {
+  margin: 0;
+}

@@ -1,0 +1,26 @@
+@import "../utils/variables";
+@import "../utils/placeholders";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: $alternative-color;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  text-align: center;
+  cursor: pointer;
+
+  border-radius: 4px;
+  border: 0px solid transparent;
+}

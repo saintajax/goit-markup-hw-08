@@ -1,0 +1,14 @@
+@import "../utils/variables";
+@import "../utils/placeholders";
+
+/* works */
+.our-works {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.works-list {
+  display: flex;
+  justify-content: space-between;
+}
