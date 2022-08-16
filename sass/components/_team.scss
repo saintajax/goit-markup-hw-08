@@ -1,15 +1,18 @@
 @import "../utils/variables";
 @import "../utils/placeholders";
+@import "../utils/fonts";
 
 /* our team  */
 
 .team-list {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
   @media screen and (min-width: 768px) {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
   }
 
   @media screen and (min-width: 1200px) {
@@ -23,39 +26,37 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  @media screen and (min-width: 450px) and (max-width: 767px) {
-    width: 450px;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    max-width: 450px;
   }
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 60px) / 2);
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &:nth-child(2n + 1) {
-      margin-right: 30px;
-    }
-
-    &:nth-child(-n + 2) {
-      margin-bottom: 30px;
-    }
+    width: calc((100% - 30px) / 2);
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 120px) / 4);
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    width: calc((100% - 90px) / 4);
   }
 }
 
 .team-list__photo {
-  margin-bottom: 30px;
+  width: 100%;
+  object-fit: cover;
+  @media screen and (min-width: 480px) {
+    height: 460px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 374px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 260px;
+  }
+}
+
+.team-list__meta {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-list__title {
@@ -67,6 +68,7 @@
 }
 
 .team-list__text {
+  margin-top: 0px;
   margin-bottom: 16px;
 
   color: $primary-text-color;
@@ -81,7 +83,6 @@
 
 .socials-list__item {
   margin-right: 10px;
-  margin-bottom: 30px;
 
   &:last-child {
     margin-right: 0px;
@@ -89,8 +90,7 @@
 }
 
 .socials-list__link {
-  display: block;
-  padding: 12px;
+  @extend %flex;
 
   width: 44px;
   height: 44px;

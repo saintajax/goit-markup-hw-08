@@ -1,5 +1,6 @@
 @import "../utils/variables";
 @import "../utils/placeholders";
+@import "../utils/fonts";
 
 /* MODAL WINDOW */
 
@@ -13,11 +14,12 @@
   height: 100%;
 
   background: rgba(0, 0, 0, 0.2);
-}
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 /* modal  */
@@ -28,16 +30,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  width: 450px;
-  height: 609px;
+  width: 95%;
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
     min-width: 528px;
     min-height: 581px;
   }
@@ -48,9 +53,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex;
 
   padding: 0px;
   margin-top: 8px;
@@ -64,10 +67,9 @@
   cursor: pointer;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-close:hover {
-  fill: $alternative-color;
+  &:hover {
+    fill: $alternative-color;
+  }
 }
 
 /* modal menu  */
@@ -88,11 +90,19 @@
   flex-direction: column;
   margin-left: 40px;
   margin-right: 40px;
+
+  @media screen and (max-width: 767px) {
+  }
+  margin-bottom: 20px;
 }
 
 .modal-menu__item {
   margin-top: 18px;
   margin-bottom: 10px;
+
+  &:nth-child(4) {
+    margin-bottom: 0px;
+  }
 }
 
 .modal-menu__field {
@@ -108,13 +118,15 @@
   border-radius: 4px;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-menu__field:active .modal-menu__input,
-.modal-menu__field:focus-within .modal-menu__input,
-.modal-menu__field:hover .modal-menu__input,
-.modal-menu__field:active .modal-menu__input {
-  border-color: $alternative-color;
+  .modal-menu__field:active &,
+  .modal-menu__field:focus-within &,
+  .modal-menu__field:hover &,
+  .modal-menu__field:active &,
+  .modal-menu-field:focus-visible & {
+    border-color: $alternative-color;
+    outline: transparent;
+  }
 }
 
 .modal-menu__input--textarea {
@@ -127,10 +139,6 @@
   line-height: 1.66;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-}
-
-.modal-menu__item:nth-child(4) {
-  margin-bottom: 0px;
 }
 
 .modal-menu__lable,
@@ -156,13 +164,13 @@
   transform: translateY(-50%);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-menu__field:active .modal-menu__icons,
-.modal-menu__field:focus-within .modal-menu__icons,
-.modal-menu__field:hover .modal-menu__icons,
-.modal-menu__field:active .modal-menu__icons {
-  fill: $alternative-color;
+  .modal-menu__field:active &,
+  .modal-menu__field:focus-within &,
+  .modal-menu__field:hover &,
+  .modal-menu__field:active & {
+    fill: $alternative-color;
+  }
 }
 
 /* checkbox  */
@@ -170,6 +178,7 @@
   display: block;
   margin-top: 20px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .checkbox__icon {
@@ -186,6 +195,11 @@
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .checkbox__input:checked + * & {
+    fill: #fff;
+    background-color: #2196f3;
+  }
 }
 
 .checkbox__border {
@@ -197,29 +211,29 @@
   z-index: 1;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.checkbox__input:checked + * .checkbox__border {
-  fill: transparent;
-}
+  .checkbox__input:checked + * & {
+    fill: transparent;
+  }
 
-.checkbox__input:focus + * .checkbox__border,
-.checkbox__input:hover + * .checkbox__border {
-  fill: $alternative-color;
-}
-
-.checkbox__input:checked + * .checkbox__check {
-  fill: #fff;
-  background-color: #2196f3;
+  .checkbox__input:focus + * &,
+  .checkbox__input:hover + * & {
+    fill: $alternative-color;
+  }
 }
 
 .checkbox__lable {
-  margin-left: 30px;
+  margin-left: 22px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__link {

@@ -1,15 +1,19 @@
 @import "../utils/variables";
 @import "../utils/placeholders";
+@import "../utils/fonts";
 
 /* advantages  */
 
 .advatages-list {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
   }
 
   @media screen and (min-width: 1200px) {
@@ -20,26 +24,16 @@
 .advatages-list__item {
   width: 100%;
 
-  @media screen and (min-width: 450px) {
+  @media screen and (min-width: 480px) {
     width: 450px;
   }
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 60px) / 2);
-  }
-
-  @media screen and (max-width: 1199px) {
-    &:nth-child(2n + 1) {
-      margin-right: 30px;
-    }
+    width: calc((100% - 30px) / 2);
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 120px) / 4);
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    width: calc((100% - 90px) / 4);
   }
 }
 
@@ -59,9 +53,10 @@
 
 .advatages-list__icon {
   margin-bottom: 30px;
-  padding: 25px;
-  text-align: center;
+  @extend %flex;
 
   background-color: #f5f4fa;
   border-radius: 4px;
+  width: 100%;
+  height: 120px;
 }

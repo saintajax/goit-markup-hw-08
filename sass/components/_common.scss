@@ -1,5 +1,6 @@
 @import "../utils/variables";
 @import "../utils/placeholders";
+@import "../utils/fonts";
 
 body {
   background-color: $primary-bg-color;
@@ -10,6 +11,8 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -51,7 +54,7 @@ img {
     max-width: 1200px;
   }
 
-  outline: 2px solid orange;
+  // outline: 2px solid orange;
 }
 
 .section {
@@ -61,6 +64,18 @@ img {
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+}
+
+.section--top {
+  @media screen and (min-width: 1200px) {
+    padding-top: 47px;
+  }
+}
+
+.section--bot {
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 47px;
   }
 }
 
