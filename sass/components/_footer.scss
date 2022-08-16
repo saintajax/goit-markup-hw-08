@@ -16,7 +16,10 @@
 }
 
 .footer-contacts {
-  margin-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
   }
@@ -66,7 +69,9 @@
 /* footer social  */
 
 .footer-social {
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
   @media screen and (min-width: 768px) {
     margin-top: 25px;

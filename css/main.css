@@ -343,13 +343,15 @@ img {
   margin-bottom: 30px;
   color: #212121;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .section__title {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.2;
   }
 }
 
@@ -368,11 +370,11 @@ img {
   align-items: center;
 } /* header  */
 .header-style {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
 .page-header {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -390,9 +392,6 @@ img {
 @media screen and (max-width: 767px) {
   .menu-conteiner {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: #ffffff;
     padding: 48px 40px;
@@ -401,7 +400,11 @@ img {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100vh;
+    width: 100vw;
     justify-content: space-between;
     z-index: 99;
   }
@@ -528,6 +531,7 @@ img {
   .contacts-list {
     flex-wrap: wrap;
     flex-basis: 50%;
+    align-content: center;
   }
 }
 
@@ -535,6 +539,9 @@ img {
   .contacts-list__item {
     margin-left: auto;
     width: 161px;
+  }
+  .contacts-list__item:nth-child(1) {
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -586,7 +593,8 @@ img {
   .contacts-list__link {
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.17;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .contacts-list__link:hover, .contacts-list__link:focus {
@@ -598,6 +606,8 @@ img {
   .contacts-list__link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -738,23 +748,23 @@ img {
   text-align: center;
   max-width: 480px;
   height: 400px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/herobg-480.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg-480.jpg);
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/herobg-960.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg-960.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
     height: 400px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/herobg-960.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg-960.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/herobg-1600.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg-1600.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -763,12 +773,12 @@ img {
     padding-bottom: 200px;
     max-width: 1600px;
     height: 600px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/herobg-1600.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg-1600.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/herobg-3200.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg-3200.jpg);
   }
 }
 
@@ -838,6 +848,11 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .advatages-list__title {
+    text-align: center;
+  }
 }
 
 .advatages-list__text {
@@ -1059,8 +1074,10 @@ img {
   background-color: #2f303a;
 }
 
-.footer-contacts {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .footer-contacts {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-contacts {
@@ -1109,8 +1126,10 @@ img {
 }
 
 /* footer social  */
-.footer-social {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .footer-social {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer-social {
@@ -1417,15 +1436,24 @@ img {
 } /* PORTFOLIO  */
 /* projects  */
 .filters {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
 }
 @media screen and (max-width: 767px) {
   .filters {
     flex-wrap: wrap;
-    margin-bottom: 25px;
     justify-content: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters {
+    margin-bottom: 50px;
   }
 }
 
@@ -1448,12 +1476,12 @@ img {
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
 @media screen and (max-width: 767px) {
-  .filters__button:nth-child(1) {
+  .filters__item:nth-child(-n+3) {
     margin-bottom: 15px;
   }
 }
-
 .filters__item:not(:last-child) {
   margin-right: 8px;
 }
@@ -1495,6 +1523,7 @@ img {
 }
 
 .card__img {
+  width: 100%;
   height: 294px;
   object-fit: cover;
 }

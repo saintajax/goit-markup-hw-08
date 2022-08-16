@@ -24,7 +24,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../../images/herobg-480.jpg);
+    url(../images/herobg-480.jpg);
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -34,7 +34,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/herobg-960.jpg);
+      url(../images/herobg-960.jpg);
   }
 
   @media screen and (min-width: 768px) {
@@ -46,7 +46,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/herobg-960.jpg);
+      url(../images/herobg-960.jpg);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -56,7 +56,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../images/herobg-1600.jpg);
+        url(../images/herobg-1600.jpg);
     }
   }
 
@@ -72,7 +72,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/herobg-1600.jpg);
+      url(../images/herobg-1600.jpg);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -82,7 +82,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../images/herobg-3200.jpg);
+        url(../images/herobg-3200.jpg);
     }
   }
 }
