@@ -39,20 +39,19 @@
   }
 }
 
-.team-list__photo {
-  width: 100%;
-  object-fit: cover;
-  @media screen and (min-width: 480px) {
-    height: 460px;
-  }
-  @media screen and (min-width: 768px) {
-    height: 374px;
-  }
+// .team-list__photo {
+//   object-fit: cover;
+//   @media screen and (min-width: 480px) {
+//     height: 460px;
+//   }
+//   @media screen and (min-width: 768px) {
+//     height: 374px;
+//   }
 
-  @media screen and (min-width: 1200px) {
-    height: 260px;
-  }
-}
+//   @media screen and (min-width: 1200px) {
+//     height: 260px;
+//   }
+// }
 
 .team-list__meta {
   padding-top: 30px;

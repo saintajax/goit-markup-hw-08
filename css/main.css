@@ -265,7 +265,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -379,6 +379,11 @@ img {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .page-header {
+    position: relative;
+  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .logo-conteiner {
@@ -400,7 +405,7 @@ img {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -422,6 +427,11 @@ img {
   border: none;
   background-color: transparent;
   z-index: 100;
+}
+.menu-button-mobile.is-open {
+  position: fixed;
+  top: 2%;
+  right: 10%;
 }
 @media screen and (min-width: 768px) {
   .menu-button-mobile {
@@ -948,26 +958,6 @@ img {
 @media screen and (min-width: 1200px) {
   .team-list__item {
     width: calc((100% - 90px) / 4);
-  }
-}
-
-.team-list__photo {
-  width: 100%;
-  object-fit: cover;
-}
-@media screen and (min-width: 480px) {
-  .team-list__photo {
-    height: 460px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .team-list__photo {
-    height: 374px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team-list__photo {
-    height: 260px;
   }
 }
 
@@ -1523,7 +1513,6 @@ img {
 }
 
 .card__img {
-  width: 100%;
   height: 294px;
   object-fit: cover;
 }
