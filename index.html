@@ -219,20 +219,27 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="list team-list">
             <li class="team-list__item">
-              <img
-                class="team-list__photo"
-                srcset="
-                  ./images/igor-270.jpg 270w,
-                  ./images/igor-354.jpg 354w,
-                  ./images/igor-450.jpg 450w,
-                  ./images/igor-540.jpg 540w,
-                  ./images/igor-708.jpg 708w,
-                  ./images/igor-900.jpg 900w
-                "
-                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
-                src="./images/igor-270.jpg"
-                alt="Игорь Демьяненко"
-              />
+              <picture>
+                <source
+                  srcset="./images/igor-270.jpg 1x, ./images/igor-540.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/igor-354.jpg 1x, ./images/igor-708.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/igor-450.jpg 1x, ./images/igor-900.jpg 2x"
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/igor-450.jpg"
+                  alt="Игорь Демьяненко"
+                  class="team-list__photo"
+                  width="270"
+                  height="260"
+                />
+              </picture>
               <div class="team-list__meta">
                 <h3 class="team-list__title titles-margin">Игорь Демьяненко</h3>
                 <p class="team-list__text">Product Designer</p>
@@ -289,7 +296,28 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="./images/olga-270.jpg 1x, ./images/olga-540.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/igor-354.jpg 1x, ./images/olga-708.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/olga-450.jpg 1x, ./images/olga-900.jpg 2x"
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/olga-450.jpg"
+                  alt="Ольга Репина"
+                  class="team-list__photo"
+                  width="270"
+                  height="260"
+                />
+              </picture>
+              <!-- <img
                 class="team-list__photo"
                 srcset="
                   ./images/olga-270.jpg   270w,
@@ -304,7 +332,7 @@
                 sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                 src="./images/olga-270.jpg"
                 alt="Ольга Репина"
-              />
+              /> -->
               <div class="team-list__meta">
                 <h3 class="team-list__title titles-margin">Ольга Репина</h3>
                 <p class="team-list__text">Frontend Developer</p>
@@ -361,7 +389,37 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/mykola-270.jpg 1x,
+                    ./images/mykola-540.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-354.jpg 1x,
+                    ./images/mykola-708.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-450.jpg 1x,
+                    ./images/mykola-900.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/mykola-450.jpg"
+                  alt="Николай Тарасов"
+                  class="team-list__photo"
+                  width="270"
+                  height="260"
+                />
+              </picture>
+              <!-- <img
                 class="team-list__photo"
                 srcset="
                   ./images/mykola-270.jpg 270w,
@@ -374,7 +432,7 @@
                 sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                 src="./images/mykola-270.jpg"
                 alt="Николай Тарасов"
-              />
+              /> -->
               <div class="team-list__meta">
                 <h3 class="team-list__title titles-margin">Николай Тарасов</h3>
                 <p class="team-list__text">Marketing</p>
@@ -431,7 +489,37 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/mykhailo-270.jpg 1x,
+                    ./images/mykhailo-540.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykhailo-354.jpg 1x,
+                    ./images/mykhailo-708.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykhailo-450.jpg 1x,
+                    ./images/mykhailo-900.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/mykhailo-450.jpg"
+                  alt="Михаил Ермаков"
+                  class="team-list__photo"
+                  width="270"
+                  height="260"
+                />
+              </picture>
+              <!-- <img
                 class="team-list__photo"
                 srcset="
                   ./images/mykhailo-270.jpg 270w,
@@ -444,7 +532,7 @@
                 sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                 src="./images/mykhailo-270.jpg"
                 alt="Михаил Ермаков"
-              />
+              /> -->
               <div class="team-list__meta">
                 <h3 class="team-list__title titles-margin">Михаил Ермаков</h3>
                 <p class="team-list__text">UI Designer</p>
